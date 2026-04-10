@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+<meta charset="UTF-8">
+<title>F1 - Úvod</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <nav class="main-nav">
+     <div class="nav-container">
+    
+        <ul>
+
+        <li><a href="index.html">Úvod</a></li>
+        <li><a href="#">Závody</a>
+           
+           <ul>
+                <li><a href="race-detail.html?race=australie">Austrálie</a></li>
+                <li><a href="race-detail.html?race=cina">Čína</a></li>
+                <li><a href="race-detail.html?race=japonsko">Japonsko</a></li>
+            
+           </ul>
+
+        
+        </li>
+        <li><a href="#">Týmy</a></li>
+        <li><a href="#">Jezdecké Složení</a></li>
+        <li><a href="#">Pořadí jezdců a týmů</a></li>    
+        </ul>
+    
+
+      </div>
+  </nav>
+
+</header>
+
+<main>
+    <section class="race-title">
+  <h1 id="race-title"></h1>
+</section>
+
+<div class="section-inner">
+  <div class="schedule-box">
+    <section class="race-schedule">
+      <h2>Rozvrh</h2>
+      <ul class="schedule-list" id="schedule"></ul>
+    </section>
+  </div>
+</div>
+
+<section class="circuit-full-width">
+  <div class="section-inner">
+    <div class="wrapper-grid">
+
+      <section class="circuit">
+        <h2 class="nadpis-h2">Okruh</h2>
+        <div class="circuit-grid" id="circuit"></div>
+      </section>
+
+      <section class="about-circuit">
+        <h2 class="nadpis-h2">O okruhu</h2>
+        <div id="info"></div>
+      </section>
+
+    </div>
+  </div>
+</section>
+</main>
+
+
+    <footer class="footer">
+  <p>© 2026 Formule 1 – studentský projekt</p>
+</footer>
+
+
+<script src="data.js"></script>
+<script src="script2.js"></script>
+</body>
+</html> 
