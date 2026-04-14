@@ -28,68 +28,65 @@ header {
     transition: color 0.2s ease;
 }
 
-.main-nav a::after {
-  content: "";
-  position: absolute;
-  left: 20px;
-  bottom: 5px;
-  width: 0;
-  height: 2px;
-  background: #e10600;
-  transition: width 0.2s ease;
-}
 
-.main-nav a:hover::after {
- width: calc(100% - 40px);
 
-}
+
+
 
 .main-nav a:hover {
   background-color: transparent;
 }
 
-.main-nav ul ul { 
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    background-color: #333;
-    min-width: 400px;
-    transform: translateX(-50%) translateY(10px);
+.main-nav ul ul {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
 
-    padding: 10px;
-    border-radius: 8px;
+  background-color: #333;
+  padding: 15px 20px;
+  border-radius: 8px;
 
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.2s ease;
+  display: grid; /* 🔥 jen grid */
+  grid-template-columns: repeat(3, auto); /* můžeš 2 nebo 3 */
+  gap: 5px 20px;
+
+  width: max-content;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  
 }
 
-.main-nav li:hover > ul  { 
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
+.main-nav li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
+
 
  
 
-.main-nav ul ul li { 
-     width: 20%;
-     box-sizing: border-box;
+.main-nav ul ul li:not(.dropdown-title) {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.178);
 }
 
 
-.main-nav ul ul li a { 
-    padding: 10px 15px;
-    white-space: nowrap;
-    text-align: center;
-    border-radius: 4px;
+.main-nav ul ul li a {
+  display: block;
+  padding: 10px 20px;
+  white-space: nowrap;
+  text-align: center;
+  
 }
 
 .main-nav ul ul li a:hover {
-
   background-color: transparent;
+    transform: translateY(-3px);
+    transition: all 0.2s ease;
 }
 
 
@@ -97,6 +94,32 @@ header {
 .nav-container { max-width: 1200px; 
                margin: 0 auto; 
 }
+
+
+.dropdown-title {
+  grid-column: 1 / -1;
+  color: #e3e3e3;
+  font-size: 15px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  pointer-events: none;
+  text-align: center;
+
+  position: relative; /* 🔥 důležité */
+  margin-bottom: 10px;
+}
+
+.dropdown-title::after {
+  content: "";
+  position: absolute;
+  left: 20px;   /* 🔥 odsazení zleva */
+  right: 20px;  /* 🔥 odsazení zprava */
+  bottom: 0;
+  height: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.178);
+}
+
+
 
 
 

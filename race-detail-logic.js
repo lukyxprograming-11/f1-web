@@ -118,5 +118,6 @@ race.info.forEach(item => {
 });
 
 document.body.classList.add("loaded");
+document.title = "VC " + race.shortName + " | F1 Web";
 
 } 
